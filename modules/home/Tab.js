@@ -4,10 +4,10 @@ import {Icon} from 'react-native-elements';
 import {fontFamily, fontSize, color} from "../../config/theme"
 import {connect} from "react-redux";
 
-class TabIcon extends React.Component {
+class Tab extends React.Component {
     render() {
-        let {iconInfo, focused, exercises} = this.props;
-        let {type, name, title, size, color, selected, style, iconSize, showBadge} = iconInfo;
+        const {iconInfo, focused, exercises} = this.props;
+        const {type, name, title, size, color, selected, style, iconSize, showBadge} = iconInfo;
 
         return (
             <View style={[styles.container, style]}>
@@ -35,7 +35,7 @@ class TabIcon extends React.Component {
     }
 }
 
-TabIcon.defaultProps = {
+Tab.defaultProps = {
     showBadge: false
 }
 
@@ -45,7 +45,7 @@ function mapStateToProps(state, props) {
     }
 }
 
-export default connect(mapStateToProps, {})(TabIcon);
+export default connect(mapStateToProps, {})(Tab);
 
 const styles = StyleSheet.create({
     container: {

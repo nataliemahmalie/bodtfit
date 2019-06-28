@@ -14,24 +14,24 @@ class Exercise extends React.Component {
 
     render() {
         const {exercise} = this.props;
-        const {images, muscle_diagram} = exercise;
+        const {images} = exercise;
 
 
         let items = JSON.parse(JSON.stringify(images));
-        items.unshift(muscle_diagram); 
-
+     
         return (
-            <ScrollView style={styles.scrollViewContainer}>
-                <ExerciseInfo exercise={exercise}/>
+            <ScrollView style={{flex: 1, backgroundColor: "#fff"}}>
+                <ExerciseInformation exercise={exercise}/>
                 <View style={[{height: 250}]}>
                     <Swiper key={items.length}>
                         {
-                            items.map((item, idx) => (
-                                    <View style={[styles.slideContainer]} key={idx + "_swiper"}>
-                                        <Image source={{uri: item}} style={styles.img}/>
-                                    </View>
-                                )
-                            )
+                        items.map((item, idx) => (
+                            <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}
+                                 key={idx + "_swiper"}>
+                                <Image source={{uri: item}} style={styles.pic}/>
+                            </View>
+                        )
+                    )
                         }
                     </Swiper>
                 </View>
@@ -45,10 +45,10 @@ class Exercise extends React.Component {
 }
 
 
-const ExerciseInfo = ({exercise}) => {
+const ExerciseInformation = ({exercise}) => {
     let {name, bmi} = exercise;
     return (
-        <View style={styles.section}>
+        <View style={{padding: padding* 2}}>
             <Text style={[styles.name]}>
                 {name}
             </Text>
@@ -66,7 +66,7 @@ const MusclesWorked = ({exercise}) => {
     let {muscles} = exercise;
     return (
         <View style={[styles.section, styles.topBorder]}>
-            <Text style={[styles.sectionText]}>MUSCLES WORKED</Text>
+            <Text style={[styles.textArea]}>MUSCLES WORKED</Text>
             <View style={[styles.muscles]}>
                 {
                     muscles.map((muscle, idx) => (
@@ -83,8 +83,8 @@ const MusclesWorked = ({exercise}) => {
 const Instructions = ({exercise}) => {
     let {instructions} = exercise;
     return(
-        <View style={[styles.section, styles.topBorder]}>
-            <Text style={[styles.sectionText]}>INSTRUCTIONS</Text>
+        <View style={{padding: padding* 2, borderTopWidth:1, borderTopColor:color.grey}}>
+            <Text style={[styles.textArea]}>INSTRUCTIONS</Text>
             <View style={[{}]}>
                 {
                     instructions.map((instruction, idx) => (
@@ -102,30 +102,8 @@ const Instructions = ({exercise}) => {
 };
 
 const styles = StyleSheet.create({
-   
-    scrollViewContainer: {
-        flex: 1,
-        backgroundColor: "#fff"
-    },
 
-
-    section:{
-        padding: padding* 2
-    },
-
-    topBorder:{
-        borderTopWidth:1,
-        borderTopColor:color.grey
-
-    },
-
-    slideContainer: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center"
-    },
-
-    img:{
+    pic:{
         height: 250,
         width: 250,
         backgroundColor: color.light_grey,
@@ -151,7 +129,7 @@ const styles = StyleSheet.create({
         color: color.secondary,
     },
 
-    sectionText: {
+    textArea: {
         fontSize: fontSize.regular,
         fontFamily: fontFamily.bold,
         color: color.grey,

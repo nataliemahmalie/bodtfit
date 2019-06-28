@@ -71,7 +71,7 @@ export function removeExercise(id) {
     };
 }
 
-export function getSelectedExercises() {
+export function getFavoriteExercises() {
     return (dispatch) => {
         return new Promise((resolve, reject) => {
             AsyncStorage.getItem(t.EXERCISE_KEY, (err, result) => {
