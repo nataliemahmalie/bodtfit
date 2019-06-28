@@ -1,28 +1,22 @@
 import {StyleSheet} from 'react-native';
 import {theme} from "../index"
-import styled from "styled-components/native";
-export const ResultText = styled.Text`
-  font-size: 15px;
-  font-weight: bold;
-`;
+
 export const {padding, color, fontSize, fontFamily} = theme;
 
 const styles = StyleSheet.create({
-    //Main Scene
+    
     container: {
         flex: 1,
         padding: padding * 6,
         backgroundColor: "#ff7f50"
     },
-
-    musclesContainer: {
+    options: {
         paddingVertical: padding * 2,
         flex: 1, paddingTop: padding * 2,
         alignItems:"center",
         padding:20,
         justifyContent:'space-between',
         marginBottom: 10
-        
     },
     
     wrapper: {
@@ -37,6 +31,7 @@ const styles = StyleSheet.create({
         borderColor: '#ddd',
         paddingVertical: padding * 3.5, backgroundColor: "#F4F2EF",
     },
+    
 
     col: {
         paddingHorizontal: 5,
@@ -45,8 +40,7 @@ const styles = StyleSheet.create({
  
 
     headline: {
-        marginVertical: padding * 3
-
+        //marginVertical: padding * 3
     },
 
     headlineText: {
@@ -56,15 +50,22 @@ const styles = StyleSheet.create({
         textAlign: "center"
     },
 
+    empyText: {
+        fontSize: fontSize.large + 8,
+        fontFamily: fontFamily.bold,
+        justifyContent: "center",
+        textAlign: "center",
+        alignItems: "center",
+        shadowRadius: 2,
+        elevation: 1,
+    },
+
     instructions: {
         fontSize: fontSize.regular + 2,
         fontFamily: fontFamily.medium,
         color: color.white,
         textAlign: "center",
         marginTop: padding
-    },
-    row: {
-        marginHorizontal: 50
     },
 
     col: {
@@ -95,7 +96,7 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
 
-    img:{
+    pic:{
         height: 150,
         width: 150,
         backgroundColor: color.light_grey,
@@ -160,6 +161,8 @@ const styles = StyleSheet.create({
     },
 
 });
+
+
 
 
 export default styles;

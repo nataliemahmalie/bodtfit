@@ -1,66 +1,128 @@
 
+import React from "react";
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  Button,
+  View,
+  TouchableOpacity,
+} from "react-native";
 
-import React, { Component } from 'react';
-import { View, StyleSheet,Button,TextInput} from 'react-native';
-import {ResultText}from  "./styles";
-import { Field } from 'redux-form';
-
-
-export default class BMI extends Component {
-  constructor(props){
-    super(props)
-    this.state={
-      userName:null,
-      gender:true,
-      Weight: 0,
-      height: 0,
-    resultText:false
-      };
-    
-    this.handleCalculate = this.handleCalculate.bind(this);
-
-  }
-
-  
-  handleCalculate = () => {
-    let bmi = this.state.Weight / (this.state.height * this.state.height);
-    let state = this.state;
-    state.resultText = bmi.toFixed(2);
-    this.setState(state);  
-  
+export default class BMI extends React.Component {
+  state = {
+    height: 0,
+    mass: 0,
+    resultNumber: 0,
+    resultText: ""
   };
-  
+
+  handleCalculate = () => {
+    let imc = (this.state.mass) / this.state.height ** 2;
+    this.setState({
+      resultNumber: imc.toFixed(2)
+    });
+
+    if (imc < 18.5) {
+      this.setState({ resultText: "Underweight" });
+    } else if (imc > 18.5 && imc < 25) {
+      this.setState({ resultText: "Normal Weight" });
+    } else if (imc >= 25 && imc < 30) {
+      this.setState({ resultText: "Overweight" });
+    } else {
+      this.setState({ resultText: "Obesity" });
+    }
+  };
+
   render() {
     const {navigate}=this.props.navigation;
-    const resultText=this.state.resultText;
     return (
+      
+        <View style={styles.container}>
+          <Text
+            style={{
+              color: "#0000ff",
+              justifyContent: "center",
+              alignSelf: "center",
+              marginTop: 30,
+              fontSize: 15
+            }}
+          >
+            BODYFIT
+          </Text>
+          <View style={styles.intro}>
+            <TextInput
+              placeholder="Height"
+              keyboardType="numeric"
+              style={styles.input}
+              onChangeText={height => {
+                this.setState({ height });
+              }}
+            />
+            <TextInput
+              placeholder="Mass"
+              keyboardType="numeric"
+              style={styles.input}
+              onChangeText={mass => {
+                this.setState({ mass });
+              }}
+            />
+          </View>
 
-      <View style={styles.container}>
-        <Field
-      name="firstName"
-      component={RFTextView}
-    />
-    <Field
-      name="lastName"
-      component={RFTextView}
-    />
-    
-        <Button on onPress={this.handleCalculate.bind(this)} title="calacute your BMI"/>
-        <ResultText >{this.state.resultText}</ResultText>
-        <Button
-          title="Start your workout!"
-          onPress={() => navigate('Main')}
-        />
-      </View>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={this.handleCalculate}
+          >
+            <Text style={styles.buttonText}>Calculate </Text>
+          </TouchableOpacity>
+          <Text style={styles.result}>{this.state.resultNumber}</Text>
+          <Text style={[styles.result, { fontSize: 35 }]}>
+            {this.state.resultText}
+          </Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigate('Main')}
+          >
+            <Text style={styles.buttonText}> Start your workout!</Text>
+          </TouchableOpacity>
+        </View>
+     
     );
   }
 }
- 
+
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
-    marginTop: 50,
-    padding: 20,
-    backgroundColor: '#ffffff',
+    flex: 1,
+    backgroundColor: "#ff7f50"
   },
+  intro: {
+    flexDirection: "row"
+  },
+  input: {
+    height: 80,
+    textAlign: "center",
+    width: "50%",
+    fontSize: 50,
+    marginTop: 24,
+    color: "#FFCB1F"
+  },
+  button: {
+    backgroundColor: "#F4F2EF"
+  },
+  buttonText: {
+    alignSelf: "center",
+    padding: 30,
+    fontSize: 25,
+    color: "#FFCB1F",
+    fontWeight: "bold"
+  },
+  result: {
+    alignSelf: "center",
+    color: "#FFCB1F",
+    fontSize: 65,
+    padding: 15
+  }
 });
+
+//export default BMI;

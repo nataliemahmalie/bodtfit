@@ -48,14 +48,6 @@ const Empty = (props) => {
             <View style={styles.wrapper}>
                 <Text style={styles.message}>{message}</Text>
 
-                <Button
-                    raised
-                    title={"Refresh"}
-                    borderRadius={0}
-                    containerViewStyle={styles.containerView}
-                    buttonStyle={styles.button}
-                    titleStyle={styles.buttonText}
-                    onPress={onPress}/>
             </View>
         </View>
     )

@@ -1,15 +1,15 @@
 import React from 'react';
-import {FlatList, View, RefreshControl, ActivityIndicator,Text,item} from 'react-native';
-import {Button} from 'react-native-elements'
+import {FlatList, View, RefreshControl} from 'react-native';
 import {connect} from 'react-redux';
+
 import ExerciseItem from "../components/ExerciseItem"
-import {actions} from "../index"
-const {getSelectedExercises, removeExercise} = actions;
-import styles from './styles'
 import {Loading, Error, Empty} from "../components/SharedComponents"
 
-class SelectedExercises extends React.Component {
+import {actions} from "../index"
 
+const {getSelectedExercises, removeExercise} = actions;
+
+class SelectedExercises extends React.Component {
     state = {
         refreshing: false,
         isFetching: true,
@@ -39,53 +39,16 @@ class SelectedExercises extends React.Component {
     renderItem = ({item, index}) => {
         const {isFetching, hasError, errorMsg} = this.state;
 
-        if (isFetching) return (
-            <View style={styles.container}>
-                <ActivityIndicator animating={true} color={"grey"}/>
-                {item.length > 0 && <Text style={styles.item}>{ item }</Text>}
-            </View>
-        )
+        if (isFetching) return <Loading/>
 
-        if (hasError) return (
-            <View style={styles.container}>
-                <View style={styles.wrapper}>
-                    <Text style={styles.title}>Ooops!</Text>
-                    <Text style={styles.item}>{ item }</Text>
-    
-                    <Button
-                        raised
-                        title={"TRY AGAIN"}
-                        borderRadius={0}
-                        containerViewStyle={styles.containerView}
-                        buttonStyle={styles.button}
-                        titleStyle={styles.buttonText}
-                        onPress={props.onPress}
-                    />
-                </View>
-            </View>
-        )
+        if (hasError) return <Error data={{message: errorMsg, onPress: () => this.getSelectedExercises(false)}}/>
 
         return <ExerciseItem exercise={item} removeExercise={this.removeExercise}/>
     };
 
-    renderEmpty = () => {
-        return (
-            <View style={[styles.container]}>
-                <View style={styles.wrapper}>
-                    <Text style={styles.item}>{item}</Text>
-    
-                    <Button
-                        raised
-                        title={"Refresh"}
-                        borderRadius={0}
-                        containerViewStyle={styles.containerView}
-                        buttonStyle={styles.button}
-                        titleStyle={styles.buttonText}
-                        onPress={props.onPress}/>
-                </View>
-            </View>
-        )
-    }
+    renderEmpty = () => (
+        <Empty data={{message: "There are no exercises to show...", onPress: () => this.getSelectedExercises(false)}}/>
+    );
 
     render() {
         const {isFetching, hasError} = this.state;
@@ -114,12 +77,10 @@ class SelectedExercises extends React.Component {
     }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state, props) {
     return {
         exercises: state.exerciseReducer.exercises
     }
 }
-
-
 
 export default connect(mapStateToProps, {getSelectedExercises, removeExercise})(SelectedExercises);

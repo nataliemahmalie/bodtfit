@@ -9,7 +9,7 @@ import Exercises from '../modules/Screens/Exercises'
 import Exercise from '../modules/Screens/Exercise'
 import Selected from '../modules/Screens/Selected'
 
-import {color, navTitleStyle, tabIconStyle, navigationBarStyle, fontFamily} from "../config/theme";
+import {color, navTitleStyle, tabIconStyle, navigationBarStyle} from "../config/theme";
 import {StatusBar} from "react-native";
 
 const HomeIcon = {...tabIconStyle, type: "font-awesome", name: "home", size: 30, iconSize: 30};
