@@ -12,7 +12,7 @@
                 "Repeat for as many reps and sets as desired."
             ],
             "muscles" : ["Chest"],
-            "equipment" : "Machine - Strength , Bench",
+            "bmi" : "Underweight",
             "muscle_diagram" : "https://artifacts.bbcomcdn.com/exercises-app/1.2.1/img/guide-1.gif"
         },
         {
@@ -27,7 +27,7 @@
                "Without allowing the dumbbells to touch, start the next repetition, and continue until the set is completed."
             ],
             "muscles" : ["Chest"],
-            "equipment" : "Dumbbells, Bench",
+            "bmi" : "Underweight",
             "muscle_diagram" : "https://artifacts.bbcomcdn.com/exercises-app/1.2.1/img/guide-1.gif"
         },
         {
@@ -42,7 +42,7 @@
                 "Repeat for the recommended amount of repetitions."
             ],
             "muscles" : ["Chest"],
-            "equipment" : "Barbell",
+            "bmi" : "Underweight",
             "muscle_diagram" : "https://artifacts.bbcomcdn.com/exercises-app/1.2.1/img/guide-1.gif"
         },
         {
@@ -55,7 +55,7 @@
                 "If you’re using plate-loaded dumbbells, you may be able to roll the weight plates on the floor during the flye. Otherwise, you can place a towel under each dumbbell to facilitate sliding. If this is too difficult, perform the exercise on your knees."
             ],
             "muscles" : ["Chest"],
-            "equipment" : "Dumbbell",
+            "bmi" : "Normal Weight",
             "muscle_diagram" : "https://artifacts.bbcomcdn.com/exercises-app/1.2.1/img/guide-1.gif"
         },
         {
@@ -70,7 +70,7 @@
                 "Repeat for the recommended amount of repetitions."
             ],
             "muscles" : ["Chest"],
-            "equipment" : "Barbell",
+            "bmi" : "Normal Weight",
             "muscle_diagram" : "https://artifacts.bbcomcdn.com/exercises-app/1.2.1/img/guide-1.gif"
         }
     ],
@@ -90,7 +90,7 @@
                 "Repeat the steps for the desired number of reps."
             ],
             "muscles" : ["Biceps"],
-            "equipment" : "Dumbbell",
+            "bmi" : "Normal Weight",
             "muscle_diagram" : "https://artifacts.bbcomcdn.com/exercises-app/1.2.1/img/guide-15.gif"
         },
         {
@@ -107,7 +107,7 @@
                 "Lower yourself to the ground, then push up. Keep your back straight and tense your abs and chest. Make sure to keep your fingers in the correct diamond position. Repeat."
             ],
             "muscles" : ["Biceps"],
-            "equipment" : "Sleeping pad",
+            "bmi" : "Overweight",
             "muscle_diagram" : "https://artifacts.bbcomcdn.com/exercises-app/1.2.1/img/guide-15.gif"
         },
         {
@@ -123,7 +123,7 @@
                 "Repeat for the desired number of repetitions on both sides."
             ],
             "muscles" : ["Biceps"],
-            "equipment" : "Dumbbell",
+            "bmi" : "Normal Weight",
             "muscle_diagram" : "https://artifacts.bbcomcdn.com/exercises-app/1.2.1/img/guide-15.gif"
         },
         {
@@ -139,7 +139,7 @@
                 "Repeat for the recommended amount of repetitions."
             ],
             "muscles" : ["Biceps"],
-            "equipment" : "Barbell",
+            "bmi" : "Overweight",
             "muscle_diagram" : "https://artifacts.bbcomcdn.com/exercises-app/1.2.1/img/guide-15.gif"
         }
     ],
@@ -157,7 +157,7 @@
                 "Tense the abs and slowly roll the barbell back towards your knees."
             ],
             "muscles" : ["Abs"],
-            "equipment" : "Barbell",
+            "bmi" : "Normal Weight",
             "muscle_diagram" : "https://artifacts.bbcomcdn.com/exercises-app/1.2.1/img/guide-13.gif"
         },
         {
@@ -175,8 +175,8 @@
                 "Twist to the opposite side and touch the floor again",
                 "Repeat this movement without stopping"
             ],
-            "muscles" : ["Abdominals"],
-            "equipment" : "Barbell",
+            "muscles" : ["Abs"],
+            "bmi" : "Overweight",
             "muscle_diagram" : "https://artifacts.bbcomcdn.com/exercises-app/1.2.1/img/guide-13.gif"
         },
         {
@@ -193,8 +193,8 @@
                 "As you inhale, go back to the starting position.",
                 "Repeat for the recommended amount of repetitions."
             ],
-            "muscles" : ["Abdominals"],
-            "equipment" : "Exercise Ball",
+            "muscles" : ["Abs"],
+            "bmi" : "Normal Weight",
             "muscle_diagram" : "https://artifacts.bbcomcdn.com/exercises-app/1.2.1/img/guide-13.gif"
         }
     ],
@@ -214,7 +214,7 @@
                 "Repeat for the recommended amount of repetitions and ensure to lock the safety pins properly once you are done. You do not want that platform falling on you fully loaded."
             ],
             "muscles" : ["Quadriceps"],
-            "equipment" : "Machine",
+            "bmi" : "Normal Weight",
             "muscle_diagram" : "https://artifacts.bbcomcdn.com/exercises-app/1.2.1/img/guide-8.gif"
         },
         {
@@ -232,7 +232,7 @@
                 "Pause at the top of the movement and slowly return to the starting position."
             ],
             "muscles" : ["Quadriceps"],
-            "equipment" : "Stand",
+            "bmi" : "Overweight",
             "muscle_diagram" : "https://artifacts.bbcomcdn.com/exercises-app/1.2.1/img/guide-7.gif"
         },
         {
@@ -250,7 +250,7 @@
                 "Keep the abdominals engaged throughout the entire stretch, this will ensure that the pelvis remains level and will provide the greatest results from the stretch.  To reduce any soreness in the knee on the ground, place an Airex pad or a rolled-up stretch mat under the knee."
             ],
             "muscles" : ["Quadriceps"],
-            "equipment" : "Sleeping pad",
+            "bmi" : "Overweight",
             "muscle_diagram" : "https://artifacts.bbcomcdn.com/exercises-app/1.2.1/img/guide-7.gif"
         },
         {
@@ -268,7 +268,7 @@
                 "Repeat for the recommended number of repetitions and then switch legs."
             ],
             "muscles" : ["Quadriceps"],
-            "equipment" : "Other",
+            "bmi" : "Normal Weight",
             "muscle_diagram" : "https://artifacts.bbcomcdn.com/exercises-app/1.2.1/img/guide-8.gif"
         }
     ]

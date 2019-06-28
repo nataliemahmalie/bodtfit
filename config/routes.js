@@ -2,12 +2,12 @@
 
 import React from 'react';
 import {Scene, Router, Stack, Tabs} from 'react-native-router-flux';
-import TabIcon from '../modules/components/TabIcon'
-import BMI from '../modules/components/BMI'
-import Main from '../modules/components/Main'
-import Exercises from '../modules/components/Exercises'
-import Exercise from '../modules/components/Exercise'
-import Selected from '../modules/components/Selected'
+import TabIcon from '../modules/home/TabIcon'
+import BMI from '../modules/home/BMI'
+import Main from '../modules/home/Main'
+import Exercises from '../modules/excercise/Exercises'
+import Exercise from '../modules/excercise/Exercise'
+import Selected from '../modules/select/Selected'
 
 import {color, navTitleStyle, tabIconStyle, navigationBarStyle} from "../config/theme";
 import {StatusBar} from "react-native";

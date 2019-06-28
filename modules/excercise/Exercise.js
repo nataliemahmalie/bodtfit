@@ -46,16 +46,16 @@ class Exercise extends React.Component {
 
 
 const ExerciseInfo = ({exercise}) => {
-    let {name, equipment} = exercise;
+    let {name, bmi} = exercise;
     return (
         <View style={styles.section}>
             <Text style={[styles.name]}>
                 {name}
             </Text>
-            <Text style={[styles.equipment]}>
-                Equipment:
-                <Text style={[styles.equipment_l]}>
-                    {" " + equipment}
+            <Text style={[styles.bmi]}>
+                bmi:
+                <Text style={[styles.bmi_l]}>
+                    {" " + bmi}
                 </Text>
             </Text>
         </View>
@@ -140,14 +140,14 @@ const styles = StyleSheet.create({
         color: color.black,
     },
 
-    equipment: {
+    bmi: {
         fontSize: fontSize.regular,
         fontFamily: fontFamily.medium,
         color: color.black,
         marginTop:padding/2
     },
 
-    equipment_l: {
+    bmi_l: {
         color: color.secondary,
     },
 

@@ -40,14 +40,26 @@ export default class BMI extends React.Component {
         <View style={styles.container}>
           <Text
             style={{
-              color: "#000080",
+              color: "#0000ff",
               justifyContent: "center",
               alignSelf: "center",
               marginTop: 30,
-              fontSize: 15
+              fontSize: 20
             }}
           >
             BODYFIT
+          </Text>
+          <Text 
+          style={{
+            color:"#0000ff",
+            justifyContent: "center",
+            alignSelf: "center",
+            marginTop: 30,
+            fontSize: 15
+          }}
+          >
+          Calculate your BMI and than choose a workout just for you!
+    
           </Text>
           <View style={styles.intro}>
             <TextInput

@@ -5,7 +5,7 @@ const { getExercises } = actions;
 import { theme, actions } from "../index"
 export const { padding, color, fontSize, fontFamily } = theme;
 import { Actions } from 'react-native-router-flux'
-import styles from './styles'
+import styles from '../styles'
 
 class Main extends React.Component {
     render() {
