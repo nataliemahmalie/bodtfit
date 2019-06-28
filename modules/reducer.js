@@ -11,14 +11,10 @@ const exerciseReducer = (state = initialState, action) => {
         }
 
         case t.ADD_EXERCISE:{
-            //get the exercise passed
+           
             let { exercise } = action.data;
-
-            //Deep copy the current exercises variable in the state
             let clone = JSON.parse(JSON.stringify(state.exercises));
-
-            clone.push(exercise); //add the new exercise to the top
-
+            clone.push(exercise); 
             return {...state, exercises:clone};
         }
 
@@ -27,13 +23,13 @@ const exerciseReducer = (state = initialState, action) => {
 
             let exercises = state.exercises;
 
-            //Deep copy the current exercises variable in the state
+           
             let clone = JSON.parse(JSON.stringify(exercises));
 
-            //find the index of the reward with the event id passed
+          
             const index = clone.findIndex((obj) => obj.id === id);
 
-            //if the reward is in the array, remove the reward
+        
             if (index !== -1) clone.splice(index, 1);
 
             return {...state, exercises:clone};

@@ -85,8 +85,3 @@ export function getSelectedExercises() {
         });
     };
 }
-
-/*function findExerciseIndex(exercises, id){
-    //find the index of the exercise with the  id passed
-    return exercises.findIndex((obj) => obj.id === id);
-}*/

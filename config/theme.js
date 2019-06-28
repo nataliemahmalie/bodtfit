@@ -4,7 +4,7 @@ import { moderateScale as normalize } from 'react-native-size-matters';
 const color = {
     black: '#1E1611',
     light_black: '#414141',
-    main: '#232138',
+    main: '#000080',
     secondary: '#F18365',
     white: '#ffffff',
     light_grey: '#eaeaea',

@@ -4,7 +4,6 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  Button,
   View,
   TouchableOpacity,
 } from "react-native";
@@ -41,7 +40,7 @@ export default class BMI extends React.Component {
         <View style={styles.container}>
           <Text
             style={{
-              color: "#0000ff",
+              color: "#000080",
               justifyContent: "center",
               alignSelf: "center",
               marginTop: 30,
@@ -105,24 +104,23 @@ const styles = StyleSheet.create({
     width: "50%",
     fontSize: 50,
     marginTop: 24,
-    color: "#FFCB1F"
+    color: "#000080"
   },
   button: {
-    backgroundColor: "#F4F2EF"
+    backgroundColor: "#000080"
   },
   buttonText: {
     alignSelf: "center",
     padding: 30,
     fontSize: 25,
-    color: "#FFCB1F",
+    color: "#F4F2EF",
     fontWeight: "bold"
   },
   result: {
     alignSelf: "center",
-    color: "#FFCB1F",
+    color: "#F4F2EF",
     fontSize: 65,
     padding: 15
   }
 });
 
-//export default BMI;

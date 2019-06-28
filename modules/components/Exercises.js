@@ -1,8 +1,7 @@
 import React from 'react';
 import {FlatList, RefreshControl, Text, View, ActivityIndicator} from 'react-native';
 import {connect} from 'react-redux';
-import ExerciseItem from "../components/ExerciseItem"
-//import { Error, Empty } from "../components/SharedComponents"
+import ExerciseItem from "./ExerciseItem"
 import { actions, theme } from "../index"
 import {Button} from 'react-native-elements'
 const { getExercises } = actions;

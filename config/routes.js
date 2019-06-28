@@ -3,11 +3,11 @@
 import React from 'react';
 import {Scene, Router, Stack, Tabs} from 'react-native-router-flux';
 import TabIcon from '../modules/components/TabIcon'
-import BMI from '../modules/Screens/BMI'
-import Main from '../modules/Screens/Main'
-import Exercises from '../modules/Screens/Exercises'
-import Exercise from '../modules/Screens/Exercise'
-import Selected from '../modules/Screens/Selected'
+import BMI from '../modules/components/BMI'
+import Main from '../modules/components/Main'
+import Exercises from '../modules/components/Exercises'
+import Exercise from '../modules/components/Exercise'
+import Selected from '../modules/components/Selected'
 
 import {color, navTitleStyle, tabIconStyle, navigationBarStyle} from "../config/theme";
 import {StatusBar} from "react-native";
