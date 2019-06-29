@@ -7,7 +7,7 @@ import BMI from '../modules/home/BMI'
 import Main from '../modules/home/Main'
 import Exercises from '../modules/excercise/Exercises'
 import Exercise from '../modules/excercise/Exercise'
-import Selected from '../modules/select/Favorite'
+import Selected from '../modules/Favorite/Favorite'
 
 import {color, navTitleStyle, tabIconStyle, navigationBarStyle} from "../config/theme";
 import {StatusBar} from "react-native";
