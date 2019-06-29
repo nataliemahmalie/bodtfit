@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
         padding: padding * 6,
         backgroundColor: "#ff7f50"
     },
+
     options: {
         paddingVertical: padding * 2,
         flex: 1, paddingTop: padding * 2,
@@ -72,7 +73,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: 25,
     },
 
-    //Exercise Scene
 
     scrollViewContainer: {
         flex: 1,

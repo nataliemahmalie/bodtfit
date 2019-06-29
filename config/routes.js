@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import {Scene, Router, Stack, Tabs} from 'react-native-router-flux';
 import TabIcon from '../modules/home/Tab'
@@ -7,7 +5,7 @@ import BMI from '../modules/home/BMI'
 import Main from '../modules/home/Main'
 import Exercises from '../modules/excercise/Exercises'
 import Exercise from '../modules/excercise/Exercise'
-import Selected from '../modules/Favorite/Favorite'
+import Favorite from '../modules/Favorite/Favorite'
 
 import {color, navTitleStyle, tabIconStyle, navigationBarStyle} from "../config/theme";
 import {StatusBar} from "react-native";
@@ -47,7 +45,7 @@ export default class extends React.Component {
                             <Scene key="Exercise" component={Exercise} back />
                         </Stack>
                         <Stack key="SelectedTab" icon={TabIcon} iconInfo={FavoriteIcon}>
-                            <Scene key="Selected" component={Selected} title="Exercise List"/>
+                            <Scene key="Favorite" component={Favorite} title="Exercise List"/>
                         </Stack>
                     </Tabs>
                 </Stack>

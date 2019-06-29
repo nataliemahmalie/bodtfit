@@ -19,16 +19,12 @@ export function getExercises(muscle) {
 export function addExercise(exercise) {
     return (dispatch) => {
         return new Promise((resolve, reject) => {
-            //Get the current value
             AsyncStorage.getItem(t.EXERCISE_KEY, (err, result) => {
                 if (!err) {
                     let exercises = (!result) ? [] : JSON.parse(result);
-
-                    //find the index of the exercise with the  id passed
-                    //const index = findExerciseIndex(exercises, exercise.id);
                     const index = exercises.findIndex((exercise) => exercise.id.id === exercise.id)
 
-                    //check if the execercie is already in the list
+              
                     if (index !== -1) reject({message: "Exercise has previously being selected"})
                     else exercises.push(exercise)
 
@@ -43,33 +39,6 @@ export function addExercise(exercise) {
     };
 }
 
-export function removeExercise(id) {
-    return (dispatch) => {
-        return new Promise((resolve, reject) => {
-            //Get the current value
-            AsyncStorage.getItem(t.EXERCISE_KEY, (err, result) => {
-                if (!err) {
-                    let exercises = (!result) ? [] : JSON.parse(result)
-
-                    //find the index of the exercise with the  id passed
-                    //const index = findExerciseIndex(exercises, id);
-                    const index = exercises.findIndex((obj) => obj.id === id)
-
-                    //if the exercise is in the array, remove the exercise
-                    if (index !== -1) {
-                        exercises.splice(index, 1);
-                        AsyncStorage.setItem(t.EXERCISE_KEY, JSON.stringify(exercises), () => {
-                            dispatch({"type": t.REMOVE_EXERCISE, data: {id}});
-                            resolve();
-                        });
-                    }else{
-                        reject({message: "Exercise not found"})
-                    }
-                } else reject({message: "Unable to add exercise, please try again !"})
-            });
-        });
-    };
-}
 
 export function getFavoriteExercises() {
     return (dispatch) => {
@@ -85,3 +54,30 @@ export function getFavoriteExercises() {
         });
     };
 }
+
+export function removeExercise(id) {
+    return (dispatch) => {
+        return new Promise((resolve, reject) => {
+           
+            AsyncStorage.getItem(t.EXERCISE_KEY, (err, result) => {
+                if (!err) {
+                    let exercises = (!result) ? [] : JSON.parse(result)
+
+                    const index = exercises.findIndex((obj) => obj.id === id)
+
+          
+                    if (index !== -1) {
+                        exercises.splice(index, 1);
+                        AsyncStorage.setItem(t.EXERCISE_KEY, JSON.stringify(exercises), () => {
+                            dispatch({"type": t.REMOVE_EXERCISE, data: {id}});
+                            resolve();
+                        });
+                    }else{
+                        reject({message: "Exercise not found"})
+                    }
+                } else reject({message: "Unable to add exercise, please try again !"})
+            });
+        });
+    };
+}
+

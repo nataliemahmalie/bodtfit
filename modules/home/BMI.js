@@ -64,7 +64,7 @@ export default class BMI extends React.Component {
           <View style={styles.intro}>
             <TextInput
               placeholder="Height"
-              keyboardType="numeric"
+              keyboardType="default"
               style={styles.input}
               onChangeText={height => {
                 this.setState({ height });
@@ -72,7 +72,7 @@ export default class BMI extends React.Component {
             />
             <TextInput
               placeholder="Mass"
-              keyboardType="numeric"
+              keyboardType="default"
               style={styles.input}
               onChangeText={mass => {
                 this.setState({ mass });

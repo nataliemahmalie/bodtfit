@@ -34,7 +34,7 @@ class ExerciseItem extends React.Component {
                 underlayColor={"transparent"}
                 onPress={() => Actions.Exercise({exercise, title:name})}>
                 <View style={[styles.wrapper]}>
-                    <Image source={{uri: images[0]}} style={styles.img}/>
+                    <Image source={{uri: images[0]}} style={styles.pic}/>
 
                     <View style={[styles.info]}>
                         <Text style={[styles.name]}> {name} </Text>
@@ -56,7 +56,7 @@ class ExerciseItem extends React.Component {
                             underlayColor={"transparent"}>
                             <Icon name={ (index !== -1) ? "md-remove" : "md-add" }
                                   type={"ionicon"}
-                                  size={14}
+                                  size={16}
                                   containerStyle={{ borderWidth: 1, borderColor: color.secondary, height: 17, width: 17, justifyContent: "center", alignItems: "center"  }}
                                   iconStyle={{height: 14}}
                                   color={color.secondary}/>
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
         borderBottomColor:"#E9E9E9"
     },
 
-    img:{
+    pic:{
         height: 100,
         width: 100,
         backgroundColor: color.light_grey,
@@ -119,20 +119,9 @@ const styles = StyleSheet.create({
         paddingHorizontal: padding,
         marginRight:padding - 2,
         backgroundColor: color.secondary
-    },
-
-    accessoryView:{
-        width: 44,
-        justifyContent:"center",
-        alignItems:"center",
-        marginLeft:padding/2
-    },
-
-    accessoryWrapper:{
-        height: 44, width: 44,
-        justifyContent:"center",
-        alignItems:"center"
     }
+
+    
 });
 
 export default connect(mapStateToProps, {addExercise, removeExercise})(ExerciseItem);
