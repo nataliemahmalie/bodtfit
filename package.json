@@ -45,5 +45,15 @@
     "jest-expo": "^32.0.0",
     "prettier": "^1.18.2"
   },
+  "checkSubmission": {
+    "ex":"final",
+    "students": [
+        {"id": "311266399", "fullName": "natali mahmali", "email": "nataliemah67@gmail.com"},
+        {"id": "312492903", "fullName": "eran golan", "email": "eranhumus@gmail.com‏"}
+    ],
+    "os": "windows", 
+    "device": "ios", 
+    "deliveryDate": "06/29/2019"
+},
   "private": true
 }
